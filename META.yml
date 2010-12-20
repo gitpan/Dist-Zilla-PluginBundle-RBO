@@ -1,5 +1,5 @@
 ---
-abstract: 'BeLike::RBO when you build your dists'
+abstract: 'Dist::Zilla plugins for RBO '
 author:
   - 'Robert Bohne <rbo@cpan.org>'
 build_requires: {}
@@ -16,106 +16,115 @@ requires:
   Dist::Zilla: 4.102346
   Dist::Zilla::Plugin::AutoMetaResources: 1.103080
   Dist::Zilla::Plugin::Git::NextVersion: 1.103520
+  Dist::Zilla::Plugin::PodVersion: 0
   Dist::Zilla::PluginBundle::Git: 0
 resources:
   bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=Dist-Zilla-PluginBundle-RBO
   homepage: http://search.cpan.org/dist/Dist-Zilla-PluginBundle-RBO
   repository: git://github.com/rbo/dist-zilla-pluginbundle-rbo.git
-version: 0.001
+version: 0.002
 x_Dist_Zilla:
   plugins:
     -
       class: Dist::Zilla::Plugin::GatherDir
-      name: '@Basic/GatherDir'
+      name: '@RBO/@Basic/GatherDir'
       version: 4.200000
     -
       class: Dist::Zilla::Plugin::PruneCruft
-      name: '@Basic/PruneCruft'
+      name: '@RBO/@Basic/PruneCruft'
       version: 4.200000
     -
       class: Dist::Zilla::Plugin::ManifestSkip
-      name: '@Basic/ManifestSkip'
+      name: '@RBO/@Basic/ManifestSkip'
       version: 4.200000
     -
       class: Dist::Zilla::Plugin::MetaYAML
-      name: '@Basic/MetaYAML'
+      name: '@RBO/@Basic/MetaYAML'
       version: 4.200000
     -
       class: Dist::Zilla::Plugin::License
-      name: '@Basic/License'
+      name: '@RBO/@Basic/License'
       version: 4.200000
     -
       class: Dist::Zilla::Plugin::Readme
-      name: '@Basic/Readme'
+      name: '@RBO/@Basic/Readme'
       version: 4.200000
     -
       class: Dist::Zilla::Plugin::ExtraTests
-      name: '@Basic/ExtraTests'
+      name: '@RBO/@Basic/ExtraTests'
       version: 4.200000
     -
       class: Dist::Zilla::Plugin::ExecDir
-      name: '@Basic/ExecDir'
+      name: '@RBO/@Basic/ExecDir'
       version: 4.200000
     -
       class: Dist::Zilla::Plugin::ShareDir
-      name: '@Basic/ShareDir'
+      name: '@RBO/@Basic/ShareDir'
       version: 4.200000
     -
       class: Dist::Zilla::Plugin::MakeMaker
-      name: '@Basic/MakeMaker'
+      name: '@RBO/@Basic/MakeMaker'
       version: 4.200000
     -
       class: Dist::Zilla::Plugin::Manifest
-      name: '@Basic/Manifest'
+      name: '@RBO/@Basic/Manifest'
       version: 4.200000
     -
       class: Dist::Zilla::Plugin::TestRelease
-      name: '@Basic/TestRelease'
+      name: '@RBO/@Basic/TestRelease'
       version: 4.200000
     -
       class: Dist::Zilla::Plugin::ConfirmRelease
-      name: '@Basic/ConfirmRelease'
+      name: '@RBO/@Basic/ConfirmRelease'
       version: 4.200000
     -
       class: Dist::Zilla::Plugin::UploadToCPAN
-      name: '@Basic/UploadToCPAN'
+      name: '@RBO/@Basic/UploadToCPAN'
       version: 4.200000
     -
-      class: Dist::Zilla::Plugin::Git::Check
-      name: '@Git/Check'
-      version: 1.103520
-    -
-      class: Dist::Zilla::Plugin::Git::Commit
-      name: '@Git/Commit'
-      version: 1.103520
-    -
-      class: Dist::Zilla::Plugin::Git::Tag
-      name: '@Git/Tag'
-      version: 1.103520
-    -
-      class: Dist::Zilla::Plugin::Git::Push
-      name: '@Git/Push'
-      version: 1.103520
-    -
-      class: Dist::Zilla::Plugin::Git::NextVersion
-      name: Git::NextVersion
-      version: 1.103520
-    -
       class: Dist::Zilla::Plugin::MetaConfig
-      name: MetaConfig
+      name: '@RBO/MetaConfig'
       version: 4.200000
     -
       class: Dist::Zilla::Plugin::MetaJSON
-      name: MetaJSON
+      name: '@RBO/MetaJSON'
+      version: 4.200000
+    -
+      class: Dist::Zilla::Plugin::Git::NextVersion
+      name: '@RBO/Git::NextVersion'
+      version: 1.103520
+    -
+      class: Dist::Zilla::Plugin::Git::Tag
+      name: '@RBO/Git::Tag'
+      version: 1.103520
+    -
+      class: Dist::Zilla::Plugin::PkgVersion
+      name: '@RBO/PkgVersion'
       version: 4.200000
     -
       class: Dist::Zilla::Plugin::PodVersion
-      name: PodVersion
+      name: '@RBO/PodVersion'
       version: 4.200000
     -
-      class: Dist::Zilla::Plugin::PkgVersion
-      name: PkgVersion
-      version: 4.200000
+      class: Dist::Zilla::Plugin::AutoMetaResources
+      name: '@RBO/AutoMetaResources'
+      version: 1.103080
+    -
+      class: Dist::Zilla::Plugin::Git::Check
+      name: '@RBO/@Git/Check'
+      version: 1.103520
+    -
+      class: Dist::Zilla::Plugin::Git::Commit
+      name: '@RBO/@Git/Commit'
+      version: 1.103520
+    -
+      class: Dist::Zilla::Plugin::Git::Tag
+      name: '@RBO/@Git/Tag'
+      version: 1.103520
+    -
+      class: Dist::Zilla::Plugin::Git::Push
+      name: '@RBO/@Git/Push'
+      version: 1.103520
     -
       class: Dist::Zilla::Plugin::Prereqs
       config:
@@ -124,10 +133,6 @@ x_Dist_Zilla:
           type: requires
       name: Prereqs
       version: 4.200000
-    -
-      class: Dist::Zilla::Plugin::AutoMetaResources
-      name: AutoMetaResources
-      version: 1.103080
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':InstallModules'

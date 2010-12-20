@@ -1,9 +1,9 @@
 
 
 This archive contains the distribution Dist-Zilla-PluginBundle-RBO,
-version 0.001:
+version 0.002:
 
-  BeLike::RBO when you build your dists
+  Dist::Zilla plugins for RBO 
 
 This software is copyright (c) 2010 by Robert Bohne.
 

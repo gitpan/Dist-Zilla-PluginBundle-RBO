@@ -9,7 +9,7 @@ use ExtUtils::MakeMaker 6.31;
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'BeLike::RBO when you build your dists',
+  'ABSTRACT' => 'Dist::Zilla plugins for RBO ',
   'AUTHOR' => 'Robert Bohne <rbo@cpan.org>',
   'BUILD_REQUIRES' => {},
   'CONFIGURE_REQUIRES' => {
@@ -23,9 +23,10 @@ my %WriteMakefileArgs = (
     'Dist::Zilla' => '4.102346',
     'Dist::Zilla::Plugin::AutoMetaResources' => '1.103080',
     'Dist::Zilla::Plugin::Git::NextVersion' => '1.103520',
+    'Dist::Zilla::Plugin::PodVersion' => '0',
     'Dist::Zilla::PluginBundle::Git' => '0'
   },
-  'VERSION' => '0.001',
+  'VERSION' => '0.002',
   'test' => {
     'TESTS' => 't/*.t'
   }
